@@ -82,7 +82,8 @@ def checkout(cart, coupons)
   cart
   apply_clearance(cart)
   binding.pry
-  cart
+  counter = 0 
+  
   
 end
 
