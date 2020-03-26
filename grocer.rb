@@ -81,10 +81,14 @@ def checkout(cart, coupons)
   apply_coupons(cart, coupons)
   cart
   apply_clearance(cart)
-  binding.pry
+  #binding.pry
   counter = 0 
-  
-  
+  total_cost = 0
+  while counter < cart.length do
+    total_cost += cart[counter][:price]
+    counter += 1 
+  end
+  total_cost
 end
 
 # Consult README for inputs and outputs
