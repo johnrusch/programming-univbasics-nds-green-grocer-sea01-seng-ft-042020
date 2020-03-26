@@ -77,11 +77,11 @@ end
 
 def checkout(cart, coupons)
   consolidate_cart(cart)
-  cart
+ 
   apply_coupons(cart, coupons)
-  cart
+  
   apply_clearance(cart)
-  cart
+  
   #binding.pry
   counter = 0 
   total_cost = 0
@@ -90,6 +90,8 @@ def checkout(cart, coupons)
     total_cost += item_price
     counter += 1 
   end
+  if total_cost > 100
+    total_cost = total_cost - (total_cost * 0.1)
   total_cost
 end
 
