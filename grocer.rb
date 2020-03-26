@@ -81,6 +81,7 @@ def checkout(cart, coupons)
   apply_coupons(cart, coupons)
   cart
   apply_clearance(cart)
+  cart
   #binding.pry
   counter = 0 
   total_cost = 0
